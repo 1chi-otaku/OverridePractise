@@ -25,6 +25,30 @@ namespace Override
         public Matrix(int n)
         {
             matrix = new int[n, 1];
+           
+        }
+
+        public int this[int i, int j]
+        {
+
+            get
+            {
+                if (i < 0 || i >= matrix.GetLength(0))
+                    throw new Exception("Invalid index" );
+                else if (j < 0 || j >= matrix.GetLength(1))
+                    throw new Exception("Invalid index");
+                else
+                    return matrix[i, j];
+            }
+            set
+            {
+                if (i < 0 || i >= matrix.GetLength(0))
+                    throw new Exception("Invalid index");
+                else if (j < 0 || j >= matrix.GetLength(1))
+                    throw new Exception("Invalid index");
+                else
+                    matrix[i, j] = value;
+            }
         }
         public void PrintMatrix()
         {

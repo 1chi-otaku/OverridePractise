@@ -36,62 +36,39 @@ namespace Override
             //}
             #endregion
             #region #2 «Матрица». Выполните перегрузку + (для сложения матриц), – (для вычитания матриц). * (умножение матриц друг на друга, умножение матрицы на число), == (проверка матриц на равенство), != и Equals
-            //try
-            //{
-            //    Matrix a = new Matrix(3,3);
-            //    Matrix b = new Matrix(3,3);
-            //    a.Random(1,10);
-            //    b.Random(10,20);
-            //    a.PrintMatrix();
-            //    Console.WriteLine();
-            //    b.PrintMatrix();
-            //    Matrix c = a + b;
-            //    Console.WriteLine();
-            //    Console.WriteLine("Summ:");
-            //    c.PrintMatrix();
-            //    c = a - b;
-            //    Console.WriteLine();
-            //    Console.WriteLine("Substraction:");
-            //    c.PrintMatrix();
-            //    c = a * b;
-            //    Console.WriteLine();
-            //    Console.WriteLine("Multiplication:");
-            //    c.PrintMatrix();
-            //    a *= 2;
-            //    Console.WriteLine();
-            //    Console.WriteLine("Matrix a was multiplicated by 2:");
-            //    a.PrintMatrix();
+            try
+            {
+                Matrix a = new Matrix(3, 3);
+                Matrix b = new Matrix(3, 3);
+                a.Random(1, 10);
+                b.Random(10, 20);
 
-            //    Console.WriteLine();
-            //    Matrix d1 = new Matrix(3,3);
-            //    Matrix d2 = new Matrix(3,3);
-            //    Console.WriteLine("D1:");
-            //    d1.PrintMatrix();
-            //    Console.WriteLine("D2:");
-            //    d2.PrintMatrix();
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        Console.Write(a[i, j] + "\t");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        a[i, j] = 6;
+                        Console.Write(a[i, j] + "\t");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+                b[3, 3] = 500;
 
-
-            //    if (d1 == d2)
-            //    {
-            //        Console.WriteLine("D1 & D2 are equal");
-            //    }
-            //    Console.WriteLine();
-            //    d2.Random(1,20);
-            //    Console.WriteLine("D1:");
-            //    d1.PrintMatrix();
-            //    Console.WriteLine("D2:");
-            //    d2.PrintMatrix();
-            //    if (d1 != d2)
-            //    {
-            //        Console.WriteLine("D1 & D2 are not equal");
-            //    }
-
-
-            //}
-            //catch(ArgumentException e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             #endregion
             #region #3 «Город». Выполните перегрузку + (для увеличения количества жителей на указанную величину), — (для уменьшения количества жителей на указанную величину), == (проверка на равенство двух городов по количеству жителей), < и >, !=,==
             //City Odesa = new City("Odesa","Ukraine","+380",5,10000000);

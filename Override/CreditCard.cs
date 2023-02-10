@@ -53,10 +53,6 @@ namespace Override
                 this.valid_time_year = valid_time_year;
 
             this.summ = summ;
-
-
-
-
         }
 
         public void PrintCardDetails()
